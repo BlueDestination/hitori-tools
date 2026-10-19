@@ -1,0 +1,8 @@
+# resources / install_resources / external_resources 为特定版本的发布资源与游戏衍生资源, 需原样保存字节
+# 禁用 CRLF/LF 归一化, 避免入库和检出时改写第三方软件与插件的内容
+resources/** -text
+install_resources/** -text
+external_resources/** -text
+
+# bat 脚本必须保持 CRLF 行尾, 否则 cmd 解析时可能出错
+*.bat text eol=crlf

@@ -1,0 +1,23 @@
+[project]
+name = "hitori-tools"
+version = "5.0"
+description = "Koikatsu mod 移植工具链与 Blender 插件"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[dependency-groups]
+# 只给外部编辑器的 bpy 补全用, 不参与运行: 插件跑在 Blender 自带 python 里
+# 许可风险见 docs/environment.md (stub 含 Blender GPL 源码的 docstring, 不得随仓库分发)
+dev = ["fake-bpy-module-3.6"]
+
+[tool.uv]
+# 本仓库不是可安装的包 (插件由 setup.bat 复制进 Blender), 只让 uv 建 stub 用的 .venv
+package = false
+
+[tool.ty.environment]
+# ty LSP 若在 .venv 建好前就启动, 会退回系统 Python (找不到 bpy stub); 这里显式钉住
+python = "./.venv"
+
+[tool.ruff]
+# 第三方 / 游戏衍生资源必须与上游字节一致(见 .gitattributes 的 -text), 不能被 lint / format 改写
+extend-exclude = ["install_resources", "resources", "external_resources", "*.md"]

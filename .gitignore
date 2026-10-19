@@ -1,0 +1,39 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.ruff_cache/
+
+# 临时文件
+*.tmp
+
+# 日志
+*.log
+
+.idea/
+
+# 插件运行时生成的数据
+/output/
+
+# C# 插件构建产物
+hitori_gui/bin/
+hitori_gui/obj/
+
+# 插件配置(安装脚本生成, 含本机路径)
+hitori_addon/hitori_addon_config.json
+
+# 游戏衍生的外部资源(版权受限, 不随仓库分发; 单独打包让用户自己解压到项目根)
+external_resources/
+
+# mod 缩略图模板(用户自行放置, 不随仓库分发)
+resources/template/zipmod/img/thumb.png
+
+# Blender 保存时的备份
+*.blend1
+*.blend2
+*.blend3
+*.blend4
+*.blend5
+
+# uv 建的 venv (只装 bpy stub, 供外部编辑器补全, 不参与运行)
+.venv/

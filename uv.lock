@@ -1,0 +1,27 @@
+version = 1
+revision = 5
+requires-python = ">=3.10"
+
+[[package]]
+name = "fake-bpy-module-3-6"
+version = "20260730"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/98/6a/4f0cde12ac1d4803f411b92f663479c42322b69cfc6a852a8a00543fb5e2/fake_bpy_module_3_6-20260730.tar.gz", hash = "sha256:ea41ebbba6ea236761577bf177fa2d89c7d6b57778a48079ad90831c71b7ebdf", size = 742628, upload-time = "2026-07-30T04:10:48.048Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/76/0b/5af794fc6c551a421f2db61c2868bad8c94c9756e658b6b0b43542e124b1/fake_bpy_module_3_6-20260730-py3-none-any.whl", hash = "sha256:b8700e262ff223c166df35f4eb7bf41a0081f15dd78636784926ac20210dc0a0", size = 858146, upload-time = "2026-07-30T04:10:46.838Z" },
+]
+
+[[package]]
+name = "hitori-tools"
+version = "5.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "fake-bpy-module-3-6" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "fake-bpy-module-3-6" }]
